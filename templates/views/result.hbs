@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>result</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="/css/result.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="weather-side">
+    <div class="weather-gradient"></div>
+    <div class="date-container">
+      <h2 class="date-dayname">{{forecast.country}}</h2><span class="date-day">{{forecast.localtime}}</span><i class="location-icon" data-feather="map-pin"></i>
+      <span class="location">{{forecast.name}}</span>
+    </div>
+    <div class="weather-container"><img class="weather-icon" src="{{address.weather_icons}}"/>
+      <h1 class="weather-temp">{{address.feelslike}}°C</h1>
+    </div>
+  </div>
+  <div class="info-side">
+    <div class="today-info-container">
+      <div class="today-info">
+        <div class="precipitation"> <span class="title">Cloudcover</span><span class="value">{{address.cloudcover}} %</span>
+          <div class="clear"></div>
+        </div>
+        <div class="humidity"> <span class="title">UV</span><span class="value">{{address.uv_index}} %</span>
+          <div class="clear"></div>
+        </div>
+        <div class="wind"> <span class="title">WIND</span><span class="value">{{address.wind_speed}} km/h</span>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="location-container">
+      <button class="location-button" onclick="window.location.href='/'"> <i data-feather="map-pin"></i><span>Change location</span></button>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script  src="./result.js"></script>
+
+</body>
+</html>
